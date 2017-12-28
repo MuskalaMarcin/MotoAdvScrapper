@@ -1,0 +1,35 @@
+package com.muskala.motoadvscrapper.data.allegro;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+/**
+ * @author Marcin Muskala
+ * @since 28.12.2017
+ */
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"id", "superSeller"})
+public class Seller {
+
+    @JsonProperty("id")
+    private String id;
+    @JsonProperty("superSeller")
+    private String superSeller;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getSuperSeller() {
+        return superSeller;
+    }
+
+    public void setSuperSeller(String superSeller) {
+        this.superSeller = superSeller;
+    }
+}
